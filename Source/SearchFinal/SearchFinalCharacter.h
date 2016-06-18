@@ -27,6 +27,9 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
+	UPROPERTY(Category = Attributes, EditAnywhere, BlueprintReadWrite)
+	float height;
+
 protected:
 
 	/** serches an object */

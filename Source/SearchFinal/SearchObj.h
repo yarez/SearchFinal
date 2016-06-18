@@ -9,7 +9,9 @@ UCLASS()
 class SEARCHFINAL_API ASearchObj : public AActor
 {
 	GENERATED_BODY()
-	
+protected:
+	bool isSearched;
+	bool hasSearchObj;
 public:	
 	// Sets default values for this actor's properties
 	ASearchObj();
@@ -20,6 +22,6 @@ public:
 	// Called every frame
 	virtual void Tick( float DeltaSeconds ) override;
 
-	
+	void Search();
 	
 };

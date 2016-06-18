@@ -103,7 +103,8 @@ void ASearchFinalCharacter::OnSearch()
 		GEngine->AddOnScreenDebugMessage(0, 3.f, FColor::Red, "Hit");
 
 		if (hitActor->GetActorLabel().Contains(TEXT("SearchObj"), ESearchCase::IgnoreCase, ESearchDir::FromEnd)) {
-			GEngine->AddOnScreenDebugMessage(0, 3.f, FColor::Red, hitActor->GetActorLabel());
+			ASearchObj *hitSearchObj = Cast<ASearchObj>(hitActor);
+			hitSearchObj->Search();
 		}
 	}
 	else {
